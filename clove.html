@@ -1,0 +1,974 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Clove Dental</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+    <style>
+        @media (max-width: 768px) {
+    body {
+        font-size: 14px;
+    }
+
+    .container {
+        padding: 20px;
+    }
+
+    h1 {
+        font-size: 28px;
+    }
+
+    /* Header styles */
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .logo {
+        margin-bottom: 10px;
+    }
+
+    nav ul {
+        flex-wrap: wrap;
+    }
+
+    nav ul li {
+        margin-right: 10px;
+        margin-bottom: 10px;
+    }
+
+    /* Hero section */
+    .hero {
+        flex-direction: column;
+        padding: 20px;
+    }
+
+    .hero-content,
+    .hero-image {
+        flex: none;
+        max-width: 100%;
+    }
+
+    .hero-image {
+        margin-top: 20px;
+    }
+
+    /* Services section */
+    .services-container {
+        grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    }
+
+    /* Form and info section */
+    .form-section,
+    .info-section {
+        flex-basis: 100%;
+    }
+
+    .info-section {
+        margin-top: 20px;
+    }
+
+    /* Dental section */
+    .dental-features,
+    .dental-doctors,
+    .dental-stats {
+        flex-wrap: wrap;
+    }
+
+    .dental-feature,
+    .dental-doctor,
+    .dental-stat {
+        flex-basis: 50%;
+        margin-bottom: 20px;
+    }
+
+    /* Footer section */
+    .footer-links-container {
+        flex-direction: column;
+    }
+
+    .link-group {
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+}
+
+/* Smaller screens */
+@media (max-width: 480px) {
+    nav ul {
+        padding: 5px 10px;
+    }
+
+    nav ul li a {
+        padding: 5px 10px;
+    }
+
+    .dental-feature,
+    .dental-doctor,
+    .dental-stat {
+        flex-basis: 100%;
+    }
+}
+        
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* General styles */
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.5;
+            background-color: #f5f5f5;
+        }
+
+        /* Header styles */
+        header {
+            background-color: #f2f2f2;
+            padding: 10px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .logo {
+            display: flex;
+            align-items: flex-end;
+        }
+
+        .clove-logo {
+            font-size: 36px;
+            color: #ff9800;
+            margin-right: 10px;
+        }
+
+        .dental {
+            font-size: 18px;
+            color: #000;
+        }
+
+        nav ul {
+            list-style-type: none;
+            display: flex;
+            background-color: #ff9800;
+            border-radius: 25px;
+            padding: 10px 20px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        nav ul li {
+            margin-right: 20px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #fff;
+            font-weight: bold;
+            padding: 10px 15px;
+            border-radius: 20px;
+            transition: background-color 0.3s ease;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+            display: flex;
+            align-items: center;
+        }
+
+        nav ul li a i {
+            margin-right: 5px;
+        }
+
+        nav ul li a:hover {
+            background-color: #e65100;
+        }
+
+        /* Hero section styles */
+        .hero {
+            background-color: #fff;
+            padding: 50px;
+            display: flex;
+            align-items: center;
+        }
+
+        .hero-content {
+            flex: 1;
+        }
+
+        .hero-content h2 {
+            font-size: 36px;
+            margin-bottom: 20px;
+        }
+
+        .hero-content p {
+            font-size: 18px;
+            margin-bottom: 30px;
+        }
+
+        .hero-content button {
+            background-color: #ff9800;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            border-radius: 25px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            transition: background-color 0.3s ease;
+        }
+
+        .hero-content button:hover {
+            background-color: #e65100;
+        }
+
+        .hero-image img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Gold Standard section styles */
+        .gold-standard {
+            background-color: #fff;
+            padding: 30px;
+            text-align: center;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            border-radius: 5px;
+            margin-bottom: 30px;
+        }
+
+        .gold-standard h2 {
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+
+        .gold-standard p {
+            font-size: 16px;
+            color: #666;
+            margin-bottom: 20px;
+        }
+
+        .rating {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 20px;
+        }
+
+        .rating img {
+            height: 24px;
+            margin-right: 8px;
+        }
+
+        .rating-score {
+            color: #ff9800;
+            font-weight: bold;
+            margin-right: 8px;
+        }
+
+        .rating-clinics {
+            color: #666;
+        }
+
+        .button {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        select,
+        button {
+            padding: 8px 16px;
+            font-size: 14px;
+            border-radius: 4px;
+            border: 1px solid #ccc;
+            outline: none;
+        }
+
+        select {
+            margin-right: 8px;
+            height: 40px;
+        }
+
+        button {
+            background-color: #ff5722;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #e64a19;
+        }
+
+        /* Services section styles */
+        .services-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            grid-gap: 20px;
+            justify-items: center;
+        }
+
+        .service {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .service:hover {
+            transform: translateY(-5px);
+        }
+
+        .service img {
+            width: 64px;
+            height: 64px;
+            margin-bottom: 10px;
+        }
+
+        .service p {
+            color: #333;
+            font-weight: bold;
+            text-align: center;
+        }
+
+        /* Other sections styles */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 40px;
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 36px;
+            margin-bottom: 40px;
+        }
+
+        .features {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 40px;
+        }
+
+        .feature {
+            margin: 0 20px;
+        }
+
+        .feature i {
+            font-size: 48px;
+            color: #ff6600;
+            margin-bottom: 10px;
+        }
+
+        .feature p {
+            margin: 5px 0;
+        }
+
+        .doctors {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 40px;
+        }
+
+        .doctor {
+            margin: 0 20px;
+            text-align: center;
+        }
+
+        .doctor img {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-bottom: 10px;
+        }
+
+        .doctor h3 {
+            margin: 10px 0 5px;
+        }
+
+        .stats {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 40px;
+        }
+
+        .stat {
+            margin: 0 20px;
+            text-align: center;
+        }
+
+
+
+        body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.form-section {
+    flex-basis: 40%;
+    background-color: #f2f2f2;
+    padding: 20px;
+    border-radius: 5px;
+}
+
+.form-section h2 {
+    margin-top: 0;
+}
+
+.form-section form {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-section input,
+.form-section select {
+    margin-bottom: 10px;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.form-section button {
+    padding: 10px;
+    background-color: #ff6600;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.select-wrapper {
+    position: relative;
+}
+
+.select-wrapper::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    width: 0;
+    height: 0;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-top: 5px solid #666;
+    pointer-events: none;
+}
+
+.info-section {
+    flex-basis: 55%;
+    padding: 20px;
+    position: relative;
+}
+
+.info-section h3 {
+    margin-top: 0;
+}
+
+.feature {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.feature img {
+    width: 50px;
+    height: 50px;
+    margin-right: 10px;
+}
+
+.feature-text p {
+    margin: 0;
+}
+
+.doctor-image {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    max-width: 200px;
+    border-radius: 50%;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f5f5f5;
+}
+
+.dental-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px;
+    text-align: center;
+}
+
+.dental-heading {
+    font-size: 36px;
+    margin-bottom: 40px;
+}
+
+.dental-features {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 40px;
+}
+
+.dental-feature {
+    margin: 0 20px;
+}
+
+.dental-icon {
+    font-size: 48px;
+    color: #ff6600;
+    margin-bottom: 10px;
+}
+
+.dental-feature p {
+    margin: 5px 0;
+}
+
+.dental-doctors {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 40px;
+}
+
+.dental-doctor {
+    margin: 0 20px;
+    text-align: center;
+}
+
+.dental-doctor img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 10px;
+}
+
+.dental-doctor h3 {
+    margin: 10px 0 5px;
+}
+
+.dental-button {
+    padding: 12px 24px;
+    background-color: #ff6600;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-bottom: 40px;
+}
+
+.dental-stats {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 40px;
+}
+
+.dental-stat {
+    margin: 0 20px;
+    text-align: center;
+}
+
+.dental-stat i {
+    font-size: 36px;
+    color: #ff6600;
+    margin-bottom: 10px;
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+}
+
+header {
+    background-color: #f2f2f2;
+    padding: 20px;
+    text-align: center;
+}
+
+.header-icons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.icon {
+    text-align: center;
+}
+
+.icon img {
+    max-width: 50px;
+    height: auto;
+}
+
+.faq-container {
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 5px;
+}
+
+.question {
+    margin-top: 20px;
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 40px 20px;
+}
+
+.footer-links-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin-bottom: 40px;
+}
+
+.link-group {
+    margin-right: 20px;
+}
+
+.link-group h3 {
+    margin-bottom: 10px;
+}
+
+.link-group ul {
+    list-style: none;
+}
+
+.link-group li {
+    margin-bottom: 5px;
+}
+
+.social-links {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.social-links a {
+    display: inline-block;
+    margin: 0 10px;
+}
+
+.social-links img {
+    max-width: 30px;
+    height: auto;
+}
+
+.copyright {
+    text-align: center;
+    font-size: 14px;
+}
+
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <span class="clove-logo">clove:)</span>
+            <span class="dental">DENTAL</span>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#">Treatments</a></li>
+                <li><a href="#">Dental Plans</a></li>
+                <li><a href="#">Our Doctors</a></li>
+                <li><a href="#">Careers</a></li>
+                <li><a href="#">Find a Clinic</a></li>
+                <li><a href="#"><i class="fas fa-book"></i> Book Appointment</a></li>
+                <li><a href="#"><i class="fas fa-phone"></i> Help?</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="hero">
+        <div class="hero-content">
+            <h2>Your Smile, Our Priority, At Clove Dental</h2>
+            <p>Explore wide range of general dentistry solutions</p>
+            <button>Book Appointment</button>
+        </div>
+        <div class="hero-image">
+            <img src="D:\clove\images\clove doc.jpg" alt="Doctor Image">
+        </div>
+    </div>
+    <div class="gold-standard">
+        <h2>Gold Standard Treatments</h2>
+        <p1>Only Asian Member of the Royal Society of Medicine, UK</p1>
+        <div class="rating">
+            <img src="D:\clove\icons\googleicon.png" alt="Google Logo">
+            <span class="rating-score">4.9/5</span>
+            <span class="rating-clinics">450+ Clinics</span>
+        </div>
+        <div class="button">
+            <select>
+                <option value="">Select your City</option>
+                <!-- Add more options for cities -->
+            </select>
+            <button>Locate nearest Clove clinic</button>
+        </div>
+    </div>
+
+    <h1>All dental issues from simple cleaning to full mouth rehabilitation under one roof</h1>
+  <div class="services-container">
+    <div class="service">
+      <img src="D:\clove\icons\root canal.jpeg" alt="Root Canal Treatment">
+      <p>Root Canal Treatment</p>
+    </div>
+    <div class="service">
+      <img src="D:\clove\icons\braces.jpeg" alt="Braces">
+      <p>Braces</p>
+    </div>
+    <div class="service">
+      <img src="D:\clove\icons\teeth brightning.png" alt="Teeth Whitening">
+      <p>Teeth Whitening</p>
+    </div>
+    <div class="service">
+      <img src="D:\clove\icons\invisible.png" alt="Invisible Braces">
+      <p>Invisible Braces</p>
+    </div>
+    <div class="service">
+      <img src="D:\clove\icons\implants.jpeg" alt="Dental Implants">
+      <p>Dental Implants</p>
+    </div>
+    <div class="service">
+      <img src="D:\clove\icons\makeover.jpeg" alt="Smile Makeover">
+      <p>Smile Makeover</p>
+    </div>
+    <div class="service">
+      <img src="D:\clove\icons\kids.png" alt="Kids Dentistry">
+      <p>Kids Dentistry</p>
+    </div>
+    <div class="service">
+      <img src="D:\clove\icons\gum.webp" alt="Gum Treatment">
+      <p>Gum Treatment</p>
+    </div>
+    <div class="service">
+      <img src="D:\clove\icons\wisdom.png" alt="Wisdom tooth">
+      <p>Wisdom tooth</p>
+    </div>
+    <div class="service">
+      <img src="D:\clove\icons\laser.png" alt="Laser/Painless Dentistry">
+      <p>Laser/Painless Dentistry</p>
+    </div>
+    <div class="service">
+      <img src="D:\clove\icons\crowns.png" alt="Crowns & Bridges">
+      <p>Crowns & Bridges</p>
+    </div>
+    <div class="service">
+      <img src="D:\clove\icons\dentures.png" alt="Dentures">
+      <p>Dentures</p>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="form-section">
+        <h2>Expert Guidance for Healthy Smiles</h2>
+        <p>Contact Now</p>
+        <form>
+            <input type="text" placeholder="Name" value="Abhishek Bhandari" readonly>
+            <input type="tel" placeholder="Mobile Number">
+            <div class="select-wrapper">
+                <select>
+                    <option value="">Select Concern</option>
+                    <!-- Add more options here -->
+                </select>
+            </div>
+            <button type="submit">Book A Free Consultation</button>
+        </form>
+    </div>
+    <div class="info-section">
+        <h3>10x Safety Protocols</h3>
+        <p>Monitored by DORI (Artificial Intelligence System)</p>
+        <a href="#">Learn More &raquo;</a>
+        <div class="feature">
+            <img src="D:\clove\icons\clinic icon.jpg" alt="Clinic Icon">
+            <div class="feature-text">
+                <p>450+ Neighbourhood Clinics Pan India</p>
+                <a href="#">Locate Clinic near you &raquo;</a>
+            </div>
+        </div>
+        <div class="feature">
+            <img src="D:\clove\icons\docicon.jpg" alt="Doctor Icon">
+            <div class="feature-text">
+                <p>1200+ Expert Doctors Covering All Specialties</p>
+                <a href="#">Explore Dentists Nearby &raquo;</a>
+            </div>
+        </div>
+        <img src="D:\clove\icons\doctor.jpg" alt="Doctor Image" class="doctor-image">
+    </div>
+</div>
+
+
+    <div class="dental-container">
+        <h1 class="dental-heading">Unmatched Dental Excellence by 1200+ Specialists</h1>
+        <div class="dental-features">
+            <div class="dental-feature">
+                <i class="fas fa-users dental-icon"></i>
+                <p>Team of Specialists</p>
+                <p>75+ Orthodontists</p>
+            </div>
+            <div class="dental-feature">
+                <i class="fas fa-venus-mars dental-icon"></i>
+                <p>Leading with</p>
+                <p>80% women</p>
+            </div>
+            <div class="dental-feature">
+                <i class="fas fa-user-md dental-icon"></i>
+                <p>60% MDs</p>
+                <p>Doctors for specialised care</p>
+            </div>
+        </div>
+        <div class="dental-doctors">
+            <div class="dental-doctor">
+                <img src="D:\clove\images\doc1.jpeg" alt="Dr. Suresh Kumar">
+                <h3>Dr. Suresh Kumar</h3>
+                <p>18+ Years Experience</p>
+            </div>
+            <div class="dental-doctor">
+                <img src="D:\clove\images\rajni.jpeg" alt="Dr. Rajni Mary">
+                <h3>Dr. Rajni Mary</h3>
+                <p>10+ Years Experience</p>
+            </div>
+            <div class="dental-doctor">
+                <img src="D:\clove\images\shusma.jpeg" alt="Dr. Shushma Reddy">
+                <h3>Dr. Shushma Reddy</h3>
+                <p>20+ Years Experience</p>
+            </div>
+        </div>
+        <button class="dental-button">Meet our Doctors</button>
+        <div class="dental-stats">
+            <div class="dental-stat">
+                <i class="fas fa-smile dental-icon"></i>
+                <p>31+ Happy Patients</p>
+            </div>
+            <div class="dental-stat">
+                <i class="fas fa-user-md dental-icon"></i>
+                <p>1200+ Dentists</p>
+            </div>
+            <div class="dental-stat">
+                <i class="fas fa-clinic-medical dental-icon"></i>
+                <p>450+ Clinics</p>
+            </div>
+            <div class="dental-stat">
+                <i class="fas fa-clock dental-icon"></i>
+                <p>7 Days Open</p>
+            </div>
+        </div>
+    </div>
+
+    <header>
+        <div class="header-icons">
+            <div class="icon">
+                <img src="D:\clove\icons\worldwide.jpg" alt="Worldwide Hires">
+                <p>Worldwide Hires</p>
+            </div>
+            <div class="icon">
+                <img src="D:\clove\icons\direct billing.png" alt="Direct Billing">
+                <p>Direct Billing</p>
+            </div>
+            <div class="icon">
+                <img src="D:\clove\icons\mentors.jpg" alt="Mentors">
+                <p>Mentors</p>
+            </div>
+            <div class="icon">
+                <img src="D:\clove\icons\surgery.jpeg" alt="Surgery">
+                <p>Surgery</p>
+            </div>
+        </div>
+    </header>
+    <main>
+        <div class="faq-container">
+            <h2>Frequently Asked Questions</h2>
+            <div class="question">
+                <p>Am I charged the dentist during work for Clover?</p>
+                <p>Can I contract the dentist to pay cash by Cloven?</p>
+            </div>
+            <div class="question">
+                <p>Will I get to know who my dentist is right away?</p>
+                <p>Can I pick up language barrier and specific skill can dentists at Clover?</p>
+            </div>
+        </div>
+        <footer>
+            <div class="footer-links-container">
+                <div class="link-group">
+                    <h3>Treatments</h3>
+                    <ul>
+                        <li>Dental Implants</li>
+                        <li>Tooth Extractions</li>
+                        <li>Root Canals</li>
+                        <li>Braces &amp; Aligners</li>
+                        <li>Crowns &amp; Bridges</li>
+                        <li>Dentures</li>
+                        <li>Dental Cleanings</li>
+                        <li>Dental Veneers</li>
+                    </ul>
+                </div>
+                <div class="link-group">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li>About Us</li>
+                        <li>Why Clover?</li>
+                        <li>Our Locations</li>
+                        <li>Pricing</li>
+                        <li>FAQs</li>
+                        <li>Blog</li>
+                    </ul>
+                </div>
+                <div class="link-group">
+                    <h3>Explore Clover</h3>
+                    <ul>
+                        <li>For Patients</li>
+                        <li>For Dentists</li>
+                        <li>Careers</li>
+                        <li>Blog</li>
+                    </ul>
+                </div>
+                <div class="link-group">
+                    <h3>Login</h3>
+                    <ul>
+                        <li>Patient Login</li>
+                        <li>Dentist Login</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="social-links">
+                <a href="#"><img src="D:\clove\icons\face.webp" alt="facebook"></a>
+                <a href="#"><img src="D:\clove\icons\twitter.webp" alt="Twitter"></a>
+                <a href="#"><img src="D:\clove\icons\inssta.webp" alt="Instagram"></a>
+            </div>
+            <p class="copyright">&copy; Clover Dental</p>
+        </footer>
+    </main>
+
+</body>
+</html>
